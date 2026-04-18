@@ -9,7 +9,7 @@ private:
 public:
     bool deposit(long majorUnits, long minorUnits = 0)
     {
-        bool isPositive = majorUnits > 0 && minorUnits > 0;
+        bool isPositive = majorUnits >= 0 && minorUnits >= 0;
         if (!isPositive || minorUnits >= 100)
             return false;
 
@@ -20,7 +20,7 @@ public:
 
     bool withdraw(long majorUnits, long minorUnits = 0)
     {
-        bool isPositive = majorUnits > 0 && minorUnits > 0;
+        bool isPositive = majorUnits >= 0 && minorUnits >= 0;
         if (!isPositive || minorUnits >= 100)
             return false;
 
